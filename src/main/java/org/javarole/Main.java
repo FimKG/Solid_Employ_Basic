@@ -5,6 +5,35 @@ import org.javarole.education.University;
 
 public class Main {
     static void main(String[] args) {
+        print_Test();
+        int[] res = return_Array(1,2);
+        for(int val : res) {
+            System.out.print(val + " ");
+        }
+    }
+
+    public static int[] return_Array(int x, int y) {
+
+        int p = x + y;
+        int q = x - y;
+        int r = x * y;
+        int s = x / y;
+        int t = x % y;
+
+        return new int[] {p, q, r, s, t};
+    }
+
+    public static void inputValue(int a, float b, double c, long l, byte d) {
+        double p = c/b;
+        double q = b/a;
+        double r = c/a;
+        double m = r+l;
+        int s = a/d;
+
+        System.out.println(p+" "+ q+" "+ r +" "+m +" "+s);
+    }
+
+    public static void print_Test() {
 
         University uni = new Student();
         double var_2 = 2.56;
@@ -45,15 +74,11 @@ public class Main {
         for(String arrs : arr) {
             System.out.println("String --- " + arrs);
         }
-    }
 
-    public static void inputValue(int a, float b, double c, long l, byte d) {
-        double p = c/b;
-        double q = b/a;
-        double r = c/a;
-        double m = r+l;
-        int s = a/d;
+        double intD = 10.23;
+        System.out.println("Double to Int : " + (int)intD);
+        int bitwize = 10;
+        System.out.println("Bitwise operators : " + (bitwize ^ 2));
 
-        System.out.println(p+" "+ q+" "+ r +" "+m +" "+s);
     }
 }
