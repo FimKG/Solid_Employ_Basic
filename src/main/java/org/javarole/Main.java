@@ -6,14 +6,9 @@ import org.javarole.education.University;
 public class Main {
     static void main(String[] args) {
         print_Test();
-        int[] res = return_Array(1,2);
-        for(int val : res) {
-            System.out.print(val + " ");
-        }
     }
 
     public static int[] return_Array(int x, int y) {
-
         int p = x + y;
         int q = x - y;
         int r = x * y;
@@ -34,7 +29,6 @@ public class Main {
     }
 
     public static void print_Test() {
-
         University uni = new Student();
         double var_2 = 2.56;
         int swap_A = 10;
@@ -45,14 +39,18 @@ public class Main {
         long l = 5;
         byte d = 127;
 
-        swap_A = swap_A+swap_B;
-        swap_B = swap_A-swap_B;
-        swap_A = swap_A-swap_B;
+        {
+            swap_A = swap_A + swap_B;
+            swap_B = swap_A - swap_B;
+            swap_A = swap_A - swap_B;
+
+            System.out.println("A : " + swap_A + " & B : " + swap_B);
+        }
 
         System.out.println(a+" "+b+" "+c+" "+l+" "+d);
         inputValue(a,b,c,l,d);
         System.out.println(a+ "" +b);
-        System.out.println("A : " + swap_A + " & B : " + swap_B);
+
         System.out.println("Narrow casting " + (int)var_2);
         System.out.println("--- Explicit Upcasting -:- " +
                 "When a sub-class object is referenced by a superclass reference variable ---");
@@ -75,10 +73,26 @@ public class Main {
             System.out.println("String --- " + arrs);
         }
 
+        int[] res = return_Array(1,2);
+        for(int val : res) {
+            System.out.print(val + " ");
+        }
+
         double intD = 10.23;
-        System.out.println("Double to Int : " + (int)intD);
+        System.out.println("\nDouble to Int : " + (int)intD);
         int bitwize = 10;
         System.out.println("Bitwise operators : " + (bitwize ^ 2));
+
+        // Ternary Operator (? :) in Java
+        int lon = 50;
+        int maxnum = (bitwize > lon) ? bitwize : lon;
+        System.out.println("Ternary Operator > : " + maxnum);
+
+        while(a<c) {
+            System.out.println(a + "");
+            a++;
+        }
+        System.out.println("while Exit: " + a);
 
     }
 }
